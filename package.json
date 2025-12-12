@@ -1,0 +1,11 @@
+{
+  "name": "cps-test-blog",
+  "version": "1.0.0",
+  "description": "CPS Test - Check Your Clicks Per Second Speed",
+  "private": true,
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["cps test", "clicks per second", "click speed test", "gaming"],
+  "license": "MIT"
+}

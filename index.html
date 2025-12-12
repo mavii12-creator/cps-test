@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CPS Test Guide - Learn what CPS means, how to test your clicks per second, improve your clicking speed, and master clicking techniques.">
+    <title>CPS Test: The Ultimate Guide to Clicks Per Second | 2025</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== CSS VARIABLES - TEAL/ORANGE THEME ===== */
+        :root {
+            --primary: #0d9488;
+            --primary-light: #14b8a6;
+            --primary-dark: #0f766e;
+            --secondary: #f97316;
+            --secondary-light: #fb923c;
+            --accent: #ec4899;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-dark: #0f172a;
+            --bg-muted: #f1f5f9;
+            --text-dark: #0f172a;
+            --text-body: #475569;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, sans-serif; font-size: 17px; line-height: 1.8; color: var(--text-body); background: var(--bg-main); }
+
+        .site-header { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%); color: white; padding: 60px 20px; text-align: center; }
+        .site-title { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+        .site-tagline { font-size: 1.1rem; opacity: 0.9; }
+
+        .main-content { max-width: 780px; margin: 0 auto; padding: 50px 20px; }
+        .article-header { margin-bottom: 40px; padding-bottom: 30px; border-bottom: 2px solid var(--bg-muted); }
+        .article-title { font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; line-height: 1.25; color: var(--text-dark); margin-bottom: 18px; }
+        .article-meta { display: flex; flex-wrap: wrap; gap: 20px; color: var(--text-muted); font-size: 0.9rem; }
+
+        .article-content h2 { font-family: 'Sora', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin: 50px 0 20px; padding-bottom: 12px; border-bottom: 3px solid var(--primary); }
+        .article-content h3 { font-family: 'Sora', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--primary-dark); margin: 35px 0 15px; }
+        .article-content h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin: 25px 0 10px; }
+        .article-content p { margin-bottom: 1.4em; }
+        .article-content strong { color: var(--text-dark); font-weight: 600; }
+
+        .toc { background: linear-gradient(135deg, var(--bg-muted) 0%, #e2e8f0 100%); border-radius: 16px; padding: 28px 30px; margin: 30px 0; }
+        .toc-title { font-family: 'Sora', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 16px; }
+        .toc ul { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .toc li a { color: var(--primary-dark); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+        .toc li a:hover { color: var(--secondary); text-decoration: underline; }
+
+        .info-box { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); border-left: 4px solid var(--primary); padding: 20px 24px; border-radius: 0 12px 12px 0; margin: 28px 0; }
+        .info-box.tip { background: linear-gradient(135deg, #fef3c7, #fde68a); border-left-color: var(--secondary); }
+        .info-box.warning { background: linear-gradient(135deg, #fce7f3, #fbcfe8); border-left-color: var(--accent); }
+        .info-box p { margin: 0; font-size: 0.98rem; }
+        .info-box strong { color: var(--primary-dark); }
+        .info-box.tip strong { color: #c2410c; }
+        .info-box.warning strong { color: #be185d; }
+
+        .steps-list { list-style: none; counter-reset: step; margin: 25px 0; }
+        .steps-list li { position: relative; padding: 20px 20px 20px 70px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 14px; counter-increment: step; transition: all 0.2s ease; }
+        .steps-list li:hover { border-color: var(--primary); box-shadow: var(--shadow); transform: translateX(5px); }
+        .steps-list li::before { content: counter(step); position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Sora', sans-serif; font-weight: 700; }
+
+        .rating-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: var(--bg-card); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+        .rating-table th, .rating-table td { padding: 16px 20px; text-align: left; border-bottom: 1px solid var(--border); }
+        .rating-table th { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; font-family: 'Sora', sans-serif; font-weight: 600; }
+        .rating-table tr:last-child td { border-bottom: none; }
+        .rating-table tr:hover td { background: var(--bg-muted); }
+        .rating-icon { font-size: 1.4rem; margin-right: 10px; }
+
+        .technique-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 25px; margin: 20px 0; transition: all 0.3s ease; }
+        .technique-card:hover { border-color: var(--primary); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+        .technique-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+        .technique-icon { font-size: 2rem; }
+        .technique-name { font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text-dark); margin: 0; }
+        .technique-cps { margin-left: auto; background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
+        .technique-desc { color: var(--text-body); font-size: 0.98rem; margin: 0; line-height: 1.7; }
+
+        .formula-box { background: linear-gradient(135deg, var(--bg-dark), #1e293b); border-radius: 16px; padding: 35px; text-align: center; margin: 30px 0; }
+        .formula { font-family: 'Sora', monospace; font-size: 1.6rem; font-weight: 700; color: var(--secondary-light); }
+        .formula-label { color: #94a3b8; font-size: 0.9rem; margin-top: 12px; }
+
+        .bullet-list { list-style: none; margin: 20px 0; }
+        .bullet-list li { position: relative; padding-left: 28px; margin-bottom: 14px; }
+        .bullet-list li::before { content: ''; position: absolute; left: 0; top: 9px; width: 12px; height: 12px; background: linear-gradient(135deg, var(--primary), var(--primary-light)); border-radius: 4px; }
+
+        .comparison-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin: 28px 0; }
+        .comparison-item { background: var(--bg-card); border: 2px solid var(--border); border-radius: 12px; padding: 20px; text-align: center; }
+        .comparison-item.good { border-color: var(--primary); background: linear-gradient(180deg, #f0fdfa, var(--bg-card)); }
+        .comparison-item.bad { border-color: #ef4444; background: linear-gradient(180deg, #fef2f2, var(--bg-card)); }
+        .comparison-icon { font-size: 2.2rem; margin-bottom: 8px; }
+        .comparison-label { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); }
+
+        .conclusion-box { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border-radius: 20px; padding: 40px; margin: 50px 0; text-align: center; }
+        .conclusion-box h3 { font-family: 'Sora', sans-serif; color: white; margin-bottom: 15px; font-size: 1.5rem; }
+        .conclusion-box p { color: rgba(255,255,255,0.9); font-size: 1.05rem; margin: 0 auto; max-width: 550px; }
+
+        .site-footer { background: var(--bg-dark); color: white; text-align: center; padding: 35px 20px; }
+        .site-footer p { color: #64748b; font-size: 0.9rem; margin: 0; }
+
+        .scroll-top { position: fixed; bottom: 25px; right: 25px; width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 1.5rem; box-shadow: 0 4px 20px rgba(13, 148, 136, 0.4); opacity: 0; visibility: hidden; transition: all 0.3s ease; z-index: 100; }
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { transform: translateY(-4px); }
+
+        @media (max-width: 768px) {
+            .site-title { font-size: 2.2rem; }
+            .article-title { font-size: 1.7rem; }
+            .toc ul { grid-template-columns: 1fr; }
+            .comparison-grid { grid-template-columns: 1fr; }
+            .technique-header { flex-wrap: wrap; }
+            .technique-cps { margin-left: 0; margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="site-title">CPS Test</h1>
+        <p class="site-tagline">Test Your Clicks Per Second • Measure Your Speed</p>
+    </header>
+
+    <main class="main-content">
+        <article class="article-content">
+            <header class="article-header">
+                <h1 class="article-title">CPS Test: The Complete Guide to Measuring Your Clicks Per Second</h1>
+                <div class="article-meta">
+                    <span>📅 Updated: December 2025</span>
+                    <span>⏱️ 8 min read</span>
+                </div>
+            </header>
+
+            <p>Ever wondered how fast you can click? Whether you're a competitive gamer looking to gain an edge in Minecraft PvP, a Roblox enthusiast, or just someone curious about their clicking speed, the <strong>CPS Test</strong> is the perfect tool to measure your performance.</p>
+
+            <p>CPS, which stands for <strong>Clicks Per Second</strong>, has become an essential metric in the gaming world. From butterfly clicking to jitter clicking, gamers have developed various techniques to maximize their clicking speed and dominate in click-intensive games.</p>
+
+            <p>In this comprehensive guide, we'll explore everything you need to know about CPS testing—what it is, how it works, and how you can improve your clicking speed to reach pro-level performance.</p>
+
+            <nav class="toc">
+                <h4 class="toc-title">📋 In This Guide</h4>
+                <ul>
+                    <li><a href="#what-is-cps">What is CPS Test?</a></li>
+                    <li><a href="#how-to-test">How to Test Your CPS</a></li>
+                    <li><a href="#cps-ratings">CPS Ratings & Benchmarks</a></li>
+                    <li><a href="#calculation">How CPS is Calculated</a></li>
+                    <li><a href="#techniques">Clicking Techniques</a></li>
+                    <li><a href="#improve">How to Improve Your CPS</a></li>
+                    <li><a href="#gaming">CPS in Gaming</a></li>
+                    <li><a href="#faq">Common Questions</a></li>
+                </ul>
+            </nav>
+
+            <h2 id="what-is-cps">What is the CPS Test?</h2>
+            <p>The <strong>CPS Test</strong> (Clicks Per Second Test) is an online tool designed to measure how many times you can click your mouse button within a specific time frame. It's a simple yet effective way to benchmark your clicking speed and track your improvement over time.</p>
+            <p>Originally popularized by the Minecraft community, CPS testing has grown into a widespread practice among gamers who play titles requiring rapid mouse clicking.</p>
+
+            <div class="info-box">
+                <p>💡 <strong>Did You Know?</strong> The average person clicks at around 6-7 CPS, while professional gamers can achieve 10-15 CPS or even higher using advanced techniques.</p>
+            </div>
+
+            <h3>Why Do People Take CPS Tests?</h3>
+            <ul class="bullet-list">
+                <li><strong>Gaming Performance:</strong> Higher CPS provides advantages in games like Minecraft, Roblox, and Cookie Clicker</li>
+                <li><strong>Competition:</strong> Gamers compete to achieve the highest CPS scores on leaderboards</li>
+                <li><strong>Skill Development:</strong> Tracking CPS helps measure improvement in clicking techniques</li>
+                <li><strong>Fun & Challenge:</strong> Many people enjoy testing their limits and beating personal records</li>
+                <li><strong>Mouse Testing:</strong> CPS tests help evaluate mouse switch responsiveness</li>
+            </ul>
+
+            <h2 id="how-to-test">How to Test Your CPS</h2>
+            <p>Testing your clicks per second is straightforward. Here's how to get accurate results:</p>
+
+            <ol class="steps-list">
+                <li><strong>Choose Your Duration:</strong> Select a test duration. The 5-second test is most popular, while 10-second tests provide more accurate averages.</li>
+                <li><strong>Position Your Hand:</strong> Place your clicking finger comfortably on the mouse button. Relax your hand—tension can slow you down.</li>
+                <li><strong>Start the Test:</strong> Click the start button and immediately begin clicking as fast as possible.</li>
+                <li><strong>Maintain Consistency:</strong> Try to keep a steady rhythm rather than burning out quickly.</li>
+                <li><strong>Review Results:</strong> Check your total clicks, CPS score, and rating. Take multiple tests for accuracy.</li>
+            </ol>
+
+            <div class="info-box tip">
+                <p>✅ <strong>Pro Tip:</strong> Take at least 3-5 tests and calculate your average. Single tests can be affected by lucky or unlucky streaks.</p>
+            </div>
+
+            <h2 id="cps-ratings">CPS Ratings & Benchmarks</h2>
+            <p>How does your clicking speed compare? Here's a breakdown of CPS ratings:</p>
+
+            <table class="rating-table">
+                <thead>
+                    <tr><th>Rating</th><th>CPS Range</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="rating-icon">🌱</span> Beginner</td><td>1-3 CPS</td><td>Just starting out</td></tr>
+                    <tr><td><span class="rating-icon">🐢</span> Below Average</td><td>4-5 CPS</td><td>Room for improvement</td></tr>
+                    <tr><td><span class="rating-icon">🐇</span> Average</td><td>6-7 CPS</td><td>Typical clicking speed</td></tr>
+                    <tr><td><span class="rating-icon">🦊</span> Above Average</td><td>8-9 CPS</td><td>Better than most</td></tr>
+                    <tr><td><span class="rating-icon">⚡</span> Fast</td><td>10-12 CPS</td><td>Competitive level</td></tr>
+                    <tr><td><span class="rating-icon">🔥</span> Pro</td><td>13-15 CPS</td><td>Professional territory</td></tr>
+                    <tr><td><span class="rating-icon">👑</span> Elite</td><td>16+ CPS</td><td>World-class</td></tr>
+                </tbody>
+            </table>
+
+            <h2 id="calculation">How is CPS Calculated?</h2>
+            <p>The CPS calculation is simple. Your score is determined by dividing total clicks by the test duration.</p>
+
+            <div class="formula-box">
+                <div class="formula">CPS = Total Clicks ÷ Time (seconds)</div>
+                <p class="formula-label">The Universal CPS Formula</p>
+            </div>
+
+            <h3>Example Calculations</h3>
+            <ul class="bullet-list">
+                <li><strong>35 clicks in 5 seconds:</strong> 35 ÷ 5 = <strong>7.0 CPS</strong></li>
+                <li><strong>82 clicks in 10 seconds:</strong> 82 ÷ 10 = <strong>8.2 CPS</strong></li>
+                <li><strong>450 clicks in 60 seconds:</strong> 450 ÷ 60 = <strong>7.5 CPS</strong></li>
+            </ul>
+
+            <h2 id="techniques">Clicking Techniques to Boost Your CPS</h2>
+            <p>Serious clickers use specialized techniques to achieve superhuman clicking speeds:</p>
+
+            <div class="technique-card">
+                <div class="technique-header">
+                    <span class="technique-icon">👆</span>
+                    <h4 class="technique-name">Regular Clicking</h4>
+                    <span class="technique-cps">5-8 CPS</span>
+                </div>
+                <p class="technique-desc">Standard clicking using one finger. The most natural and comfortable method, suitable for everyday use and casual gaming.</p>
+            </div>
+
+            <div class="technique-card">
+                <div class="technique-header">
+                    <span class="technique-icon">💪</span>
+                    <h4 class="technique-name">Jitter Clicking</h4>
+                    <span class="technique-cps">10-14 CPS</span>
+                </div>
+                <p class="technique-desc">Involves tensing your arm muscles to create rapid vibrations that translate into fast clicks. Requires practice to master.</p>
+            </div>
+
+            <div class="technique-card">
+                <div class="technique-header">
+                    <span class="technique-icon">🦋</span>
+                    <h4 class="technique-name">Butterfly Clicking</h4>
+                    <span class="technique-cps">15-25 CPS</span>
+                </div>
+                <p class="technique-desc">Uses two fingers alternating rapidly on the mouse button. Creates a "butterfly wing" motion with very high CPS potential.</p>
+            </div>
+
+            <div class="technique-card">
+                <div class="technique-header">
+                    <span class="technique-icon">✋</span>
+                    <h4 class="technique-name">Drag Clicking</h4>
+                    <span class="technique-cps">25-100+ CPS</span>
+                </div>
+                <p class="technique-desc">Dragging your finger across the mouse button to register multiple clicks through friction. Often banned in competitive gaming.</p>
+            </div>
+
+            <div class="info-box warning">
+                <p>⚠️ <strong>Warning:</strong> Advanced clicking techniques can cause strain with prolonged use. Take breaks and stop if you experience discomfort.</p>
+            </div>
+
+            <h2 id="improve">How to Improve Your CPS</h2>
+            <p>Want to boost your clicking speed? Here are proven strategies:</p>
+
+            <h3>1. Practice Regularly</h3>
+            <p>Like any skill, clicking speed improves with consistent practice. Spend 10-15 minutes daily on CPS tests.</p>
+
+            <h3>2. Use the Right Equipment</h3>
+            <p>A quality gaming mouse with responsive switches makes a significant difference.</p>
+
+            <h3>3. Optimize Your Grip</h3>
+            <p>Experiment with different mouse grips (palm, claw, fingertip) to find what works best.</p>
+
+            <h3>4. Stay Relaxed</h3>
+            <p>Tension slows you down. Keep your hand, wrist, and arm relaxed while clicking.</p>
+
+            <div class="comparison-grid">
+                <div class="comparison-item good"><div class="comparison-icon">✅</div><div class="comparison-label">Gaming Mouse</div></div>
+                <div class="comparison-item bad"><div class="comparison-icon">❌</div><div class="comparison-label">Office Mouse</div></div>
+                <div class="comparison-item good"><div class="comparison-icon">✅</div><div class="comparison-label">Relaxed Hand</div></div>
+                <div class="comparison-item bad"><div class="comparison-icon">❌</div><div class="comparison-label">Tense Muscles</div></div>
+            </div>
+
+            <h2 id="gaming">Why CPS Matters in Gaming</h2>
+            <p>In many popular games, your clicking speed directly impacts gameplay:</p>
+
+            <h3>Minecraft PvP</h3>
+            <p>Higher CPS means landing more hits on opponents. A player with 12 CPS has a significant advantage over someone clicking at 6 CPS.</p>
+
+            <h3>Roblox Games</h3>
+            <p>Various Roblox experiences reward fast clicking, from combat games to clicking simulators.</p>
+
+            <h3>Clicker & Idle Games</h3>
+            <p>Games like Cookie Clicker are designed around clicking mechanics.</p>
+
+            <div class="info-box tip">
+                <p>🎮 <strong>Gaming Tip:</strong> While high CPS helps, don't neglect other skills like aim, strategy, and game sense.</p>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <h3>What is a good CPS score?</h3>
+            <p>For casual users, 6-8 CPS is considered good. Competitive gamers typically aim for 10+ CPS.</p>
+
+            <h3>What is the world record for CPS?</h3>
+            <p>The unofficial world record is around 22 CPS using legitimate clicking techniques.</p>
+
+            <h3>Can clicking too fast damage my mouse?</h3>
+            <p>Quality gaming mice are rated for 20-80 million clicks. However, aggressive techniques may wear out switches faster.</p>
+
+            <h3>Which test duration is most accurate?</h3>
+            <p>The 10-second test provides the best balance between accuracy and convenience.</p>
+
+            <h3>Is using an auto clicker cheating?</h3>
+            <p>In competitive games, auto clickers are typically considered cheating and may result in bans.</p>
+
+            <div class="conclusion-box">
+                <h3>🎯 Start Testing Your CPS Today</h3>
+                <p>Whether you're training for competitive gaming or just curious about your clicking abilities, the CPS test is a fun way to measure and improve your skills!</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 CPS Test Guide • Free Online Clicks Per Second Test</p>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            btn.classList.toggle('visible', window.pageYOffset > 400);
+        });
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
